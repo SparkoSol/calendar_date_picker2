@@ -697,6 +697,7 @@ class CalendarDatePicker2WithActionButtonsConfig
     this.buttonPadding,
     this.actionButtonLeftPadding,
     this.actionButtonRightPadding,
+    this.actionButtonHoverColor,
   }) : super(
           calendarType: calendarType,
           firstDate: firstDate,
@@ -804,6 +805,9 @@ class CalendarDatePicker2WithActionButtonsConfig
   /// Right padding for the action buttons row
   final double? actionButtonRightPadding;
 
+  /// Hover color for action buttons
+  final Color? actionButtonHoverColor;
+
   @override
   CalendarDatePicker2WithActionButtonsConfig copyWith({
     CalendarDatePicker2Type? calendarType,
@@ -865,8 +869,9 @@ class CalendarDatePicker2WithActionButtonsConfig
     bool? closeDialogOnCancelTapped,
     bool? closeDialogOnOkTapped,
     EdgeInsets? buttonPadding,
-    double? actionButtonactionButtonLeftPadding,
-    double? actionButtonactionButtonRightPadding,
+    double? actionButtonLeftPadding,
+    double? actionButtonRightPadding,
+    Color? actionButtonHoverColor,
     bool? rangeBidirectional,
     ScrollPhysics? calendarViewScrollPhysics,
     Color? daySplashColor,
@@ -971,6 +976,7 @@ class CalendarDatePicker2WithActionButtonsConfig
       buttonPadding: buttonPadding ?? this.buttonPadding,
       actionButtonLeftPadding: actionButtonLeftPadding ?? this.actionButtonLeftPadding,
       actionButtonRightPadding: actionButtonRightPadding ?? this.actionButtonRightPadding,
+      actionButtonHoverColor: actionButtonHoverColor ?? this.actionButtonHoverColor,
       calendarViewScrollPhysics:
           calendarViewScrollPhysics ?? this.calendarViewScrollPhysics,
       daySplashColor: daySplashColor ?? this.daySplashColor,
