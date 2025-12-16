@@ -16,55 +16,55 @@ void main() {
   });
 
   group('CalendarDatePicker2WithActionButtonsConfig padding tests', () {
-    test('leftPadding and rightPadding parameters can be set', () {
+    test('actionButtonLeftPadding and actionButtonRightPadding parameters can be set', () {
       final config = CalendarDatePicker2WithActionButtonsConfig(
-        leftPadding: 20,
-        rightPadding: 20,
+        actionButtonLeftPadding: 20,
+        actionButtonRightPadding: 20,
       );
 
-      expect(config.leftPadding, 20);
-      expect(config.rightPadding, 20);
+      expect(config.actionButtonLeftPadding, 20);
+      expect(config.actionButtonRightPadding, 20);
     });
 
-    test('leftPadding and rightPadding default to null', () {
+    test('actionButtonLeftPadding and actionButtonRightPadding default to null', () {
       final config = CalendarDatePicker2WithActionButtonsConfig();
 
-      expect(config.leftPadding, null);
-      expect(config.rightPadding, null);
+      expect(config.actionButtonLeftPadding, null);
+      expect(config.actionButtonRightPadding, null);
     });
 
-    test('copyWith preserves leftPadding and rightPadding', () {
+    test('copyWith preserves actionButtonLeftPadding and actionButtonRightPadding', () {
       final config = CalendarDatePicker2WithActionButtonsConfig(
-        leftPadding: 20,
-        rightPadding: 30,
+        actionButtonLeftPadding: 20,
+        actionButtonRightPadding: 30,
       );
 
       final copiedConfig = config.copyWith();
 
-      expect(copiedConfig.leftPadding, 20);
-      expect(copiedConfig.rightPadding, 30);
+      expect(copiedConfig.actionButtonLeftPadding, 20);
+      expect(copiedConfig.actionButtonRightPadding, 30);
     });
 
-    test('copyWith can update leftPadding and rightPadding', () {
+    test('copyWith can update actionButtonLeftPadding and actionButtonRightPadding', () {
       final config = CalendarDatePicker2WithActionButtonsConfig(
-        leftPadding: 20,
-        rightPadding: 30,
+        actionButtonLeftPadding: 20,
+        actionButtonRightPadding: 30,
       );
 
       final updatedConfig = config.copyWith(
-        leftPadding: 40,
-        rightPadding: 50,
+        actionButtonLeftPadding: 40,
+        actionButtonRightPadding: 50,
       );
 
-      expect(updatedConfig.leftPadding, 40);
-      expect(updatedConfig.rightPadding, 50);
+      expect(updatedConfig.actionButtonLeftPadding, 40);
+      expect(updatedConfig.actionButtonRightPadding, 50);
     });
 
-    testWidgets('leftPadding and rightPadding are applied to action buttons row',
+    testWidgets('actionButtonLeftPadding and actionButtonRightPadding are applied to action buttons row',
         (widgetTester) async {
       final config = CalendarDatePicker2WithActionButtonsConfig(
-        leftPadding: 24,
-        rightPadding: 32,
+        actionButtonLeftPadding: 24,
+        actionButtonRightPadding: 32,
       );
 
       await widgetTester.pumpWidget(MaterialApp(
