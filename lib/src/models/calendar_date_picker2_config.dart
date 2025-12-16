@@ -695,8 +695,8 @@ class CalendarDatePicker2WithActionButtonsConfig
     this.closeDialogOnCancelTapped,
     this.closeDialogOnOkTapped,
     this.buttonPadding,
-    this.leftPadding,
-    this.rightPadding,
+    this.actionButtonLeftPadding,
+    this.actionButtonRightPadding,
   }) : super(
           calendarType: calendarType,
           firstDate: firstDate,
@@ -799,10 +799,10 @@ class CalendarDatePicker2WithActionButtonsConfig
   final EdgeInsets? buttonPadding;
 
   /// Left padding for the action buttons row
-  final double? leftPadding;
+  final double? actionButtonLeftPadding;
 
   /// Right padding for the action buttons row
-  final double? rightPadding;
+  final double? actionButtonRightPadding;
 
   @override
   CalendarDatePicker2WithActionButtonsConfig copyWith({
@@ -865,8 +865,8 @@ class CalendarDatePicker2WithActionButtonsConfig
     bool? closeDialogOnCancelTapped,
     bool? closeDialogOnOkTapped,
     EdgeInsets? buttonPadding,
-    double? actionButtonLeftPadding,
-    double? actionButtonRightPadding,
+    double? actionButtonactionButtonLeftPadding,
+    double? actionButtonactionButtonRightPadding,
     bool? rangeBidirectional,
     ScrollPhysics? calendarViewScrollPhysics,
     Color? daySplashColor,
@@ -969,8 +969,8 @@ class CalendarDatePicker2WithActionButtonsConfig
       closeDialogOnOkTapped:
           closeDialogOnOkTapped ?? this.closeDialogOnOkTapped,
       buttonPadding: buttonPadding ?? this.buttonPadding,
-      leftPadding: leftPadding ?? this.leftPadding,
-      rightPadding: rightPadding ?? this.rightPadding,
+      actionButtonLeftPadding: actionButtonLeftPadding ?? this.actionButtonLeftPadding,
+      actionButtonRightPadding: actionButtonRightPadding ?? this.actionButtonRightPadding,
       calendarViewScrollPhysics:
           calendarViewScrollPhysics ?? this.calendarViewScrollPhysics,
       daySplashColor: daySplashColor ?? this.daySplashColor,
