@@ -105,7 +105,8 @@ class _CalendarDatePicker2WithActionButtonsState
             if ((widget.config.gapBetweenCalendarAndButtons ?? 0) > 0)
               SizedBox(width: widget.config.gapBetweenCalendarAndButtons),
             _buildOkButton(Theme.of(context).colorScheme, localizations),
-            SizedBox(width: widget.config.rightPadding ?? 16),
+              if ((widget.config.rightPadding ?? 0) > 0)
+              SizedBox(width: widget.config.rightPadding),
           ],
         ),
       ],
