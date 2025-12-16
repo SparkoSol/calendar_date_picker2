@@ -117,6 +117,7 @@ class _CalendarDatePicker2WithActionButtonsState
       ColorScheme colorScheme, MaterialLocalizations localizations) {
     return InkWell(
       borderRadius: BorderRadius.circular(5),
+      hoverColor: widget.config.actionButtonHoverColor,
       onTap: () => setState(() {
         _editCache = _values;
         widget.onCancelTapped?.call();
@@ -147,6 +148,7 @@ class _CalendarDatePicker2WithActionButtonsState
       ColorScheme colorScheme, MaterialLocalizations localizations) {
     return InkWell(
       borderRadius: BorderRadius.circular(5),
+      hoverColor: widget.config.actionButtonHoverColor,
       onTap: () => setState(() {
         _values = _editCache;
         widget.onValueChanged?.call(_values);

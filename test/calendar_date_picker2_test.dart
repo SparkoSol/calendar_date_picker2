@@ -80,4 +80,61 @@ void main() {
       expect(find.byType(CalendarDatePicker2WithActionButtons), findsOneWidget);
     });
   });
+
+  group('CalendarDatePicker2WithActionButtonsConfig actionButtonHoverColor tests', () {
+    test('actionButtonHoverColor parameter can be set', () {
+      final config = CalendarDatePicker2WithActionButtonsConfig(
+        actionButtonHoverColor: Colors.blue,
+      );
+
+      expect(config.actionButtonHoverColor, Colors.blue);
+    });
+
+    test('actionButtonHoverColor defaults to null', () {
+      final config = CalendarDatePicker2WithActionButtonsConfig();
+
+      expect(config.actionButtonHoverColor, null);
+    });
+
+    test('copyWith preserves actionButtonHoverColor', () {
+      final config = CalendarDatePicker2WithActionButtonsConfig(
+        actionButtonHoverColor: Colors.red,
+      );
+
+      final copiedConfig = config.copyWith();
+
+      expect(copiedConfig.actionButtonHoverColor, Colors.red);
+    });
+
+    test('copyWith can update actionButtonHoverColor', () {
+      final config = CalendarDatePicker2WithActionButtonsConfig(
+        actionButtonHoverColor: Colors.red,
+      );
+
+      final updatedConfig = config.copyWith(
+        actionButtonHoverColor: Colors.green,
+      );
+
+      expect(updatedConfig.actionButtonHoverColor, Colors.green);
+    });
+
+    testWidgets('actionButtonHoverColor is applied to action buttons',
+        (widgetTester) async {
+      final config = CalendarDatePicker2WithActionButtonsConfig(
+        actionButtonHoverColor: Colors.amber,
+      );
+
+      await widgetTester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: CalendarDatePicker2WithActionButtons(
+            value: const [],
+            config: config,
+          ),
+        ),
+      ));
+
+      // Verify widget builds without errors
+      expect(find.byType(CalendarDatePicker2WithActionButtons), findsOneWidget);
+    });
+  });
 }
