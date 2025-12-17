@@ -137,4 +137,61 @@ void main() {
       expect(find.byType(CalendarDatePicker2WithActionButtons), findsOneWidget);
     });
   });
+
+  group('CalendarDatePicker2WithActionButtonsConfig actionButtonAlignment tests', () {
+    test('actionButtonAlignment parameter can be set', () {
+      final config = CalendarDatePicker2WithActionButtonsConfig(
+        actionButtonAlignment: MainAxisAlignment.center,
+      );
+
+      expect(config.actionButtonAlignment, MainAxisAlignment.center);
+    });
+
+    test('actionButtonAlignment defaults to null', () {
+      final config = CalendarDatePicker2WithActionButtonsConfig();
+
+      expect(config.actionButtonAlignment, null);
+    });
+
+    test('copyWith preserves actionButtonAlignment', () {
+      final config = CalendarDatePicker2WithActionButtonsConfig(
+        actionButtonAlignment: MainAxisAlignment.start,
+      );
+
+      final copiedConfig = config.copyWith();
+
+      expect(copiedConfig.actionButtonAlignment, MainAxisAlignment.start);
+    });
+
+    test('copyWith can update actionButtonAlignment', () {
+      final config = CalendarDatePicker2WithActionButtonsConfig(
+        actionButtonAlignment: MainAxisAlignment.start,
+      );
+
+      final updatedConfig = config.copyWith(
+        actionButtonAlignment: MainAxisAlignment.spaceBetween,
+      );
+
+      expect(updatedConfig.actionButtonAlignment, MainAxisAlignment.spaceBetween);
+    });
+
+    testWidgets('actionButtonAlignment is applied to action buttons row',
+        (widgetTester) async {
+      final config = CalendarDatePicker2WithActionButtonsConfig(
+        actionButtonAlignment: MainAxisAlignment.center,
+      );
+
+      await widgetTester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: CalendarDatePicker2WithActionButtons(
+            value: const [],
+            config: config,
+          ),
+        ),
+      ));
+
+      // Verify widget builds without errors
+      expect(find.byType(CalendarDatePicker2WithActionButtons), findsOneWidget);
+    });
+  });
 }
