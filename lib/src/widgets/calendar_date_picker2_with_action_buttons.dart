@@ -97,7 +97,8 @@ class _CalendarDatePicker2WithActionButtonsState
         ),
         SizedBox(height: widget.config.gapBetweenCalendarAndButtons ?? 10),
         Row(
-          mainAxisAlignment: widget.config.actionButtonAlignment ?? MainAxisAlignment.end,
+          mainAxisAlignment: widget.config.actionButtonAlignment ?? MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.max,
           children: [
             if ((widget.config.actionButtonLeftPadding ?? 0) > 0)
               SizedBox(width: widget.config.actionButtonLeftPadding),
